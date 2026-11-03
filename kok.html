@@ -1,10 +1,11 @@
 <!doctype html>
 <html>
 <body>
-	<input type="text" id="link" placeholder="tcp:127.0.0.1:5762"><br>
+	<input type="text" id="link" placeholder="tcp:127.0.0.1:5762"><br> <!-- daniel maak link, lat en lon deel van de locatiekiezer kaart -->
 	<input type="number" id="lat" placeholder="lat"><br>
 	<input type="number" id="lon" placeholder="lon"><br>
 	<button onclick="fetch('https://127.0.0.1:5000/run',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command:'python Mission.py '+document.getElementById('lat').value+' '+document.getElementById('lon').value+' '+document.getElementById('link').value})})">Run</button><br><br>
-	<a href="https://127.0.0.1:5000" target="_blank">127.0.0.1:5000</a>
 </body>
 </html>
+
+<!-- zorg ervoor dat we een kaart hebben waar je een locatie kan op kiezen, zodat de juiste coordinaten worden opgestuurd als je op de knop klikt -->
